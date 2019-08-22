@@ -10,7 +10,6 @@ public class RentalStoreQuizApp {
 
 	public static void main(String[] args) {
 		RentalStoreQuizApp rents = new RentalStoreQuizApp();
-
 		// We are creating a film rental store application. 
 		// The store can have any number of unique customers.
 		
@@ -41,21 +40,21 @@ public class RentalStoreQuizApp {
 
 	public Store createStore() {
 		// TODO: implement the method
-		return null;
+		return new Store();
 	}
 
 	public Customer createCustomer(String fn, String ln) {
 		// TODO: implement the method
-		return null;
+		return new Customer(fn, ln);
 	}
 
 	public void registerCustomerAtStore(Store st, Customer ct) {
 		// TODO: implement the method
-		
+		st.addACustomer(ct);
 	}
 	
 	public void displayData (Store s) {
 		// TODO: implement the method
-	
+		s.displayAllData();
 	}
 }

@@ -5,11 +5,42 @@ import java.util.Set;
 
 public class Store {
 	// TODO: each store has an id
-	
+	private int id;
+	private static int totalStores;
 	// TODO: each store has 0 or more unique Customers
-	
+	private Set<Customer> customers;
+
 	// TODO: implement the required methods to:
-	//       * Add a customer (no duplicates allowed)
-	//       * Return the number of customers
-	//       * Display all data
+	// * Add a customer (no duplicates allowed)
+	// * Return the number of customers
+	// * Display all data
+	public Store() {
+		this.id = totalStores+1;
+		customers = new HashSet<>();
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public Set<Customer> getCustomers() {
+		Set<Customer> newCustomers = new HashSet<>(customers);
+		return newCustomers;
+	}
+
+	public void addACustomer(Customer newCustomer) {
+		customers.add(newCustomer);
+	}
+
+	public int totalCustomers() {
+		return customers.size();
+	}
+
+	public void displayAllData() {
+		System.out.println("Store: " + id);
+		for (Customer customer : customers) {
+			System.out.println(customer);
+		}
+	}
+
 }

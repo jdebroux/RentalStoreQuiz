@@ -9,10 +9,11 @@ import org.junit.jupiter.api.Test;
 
 class RentalStoreTests {
 	// TODO: make necessary declarations
+	
 
 	@BeforeEach
 	void setUp() throws Exception {
-		// TODO: implement
+		// TODO: implement		
 	}
 
 	@AfterEach
