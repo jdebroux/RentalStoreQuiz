@@ -2,6 +2,7 @@ package com.skilldistillery.entities;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Store {
 	// TODO: each store has an id
@@ -15,7 +16,7 @@ public class Store {
 	// * Return the number of customers
 	// * Display all data
 	public Store() {
-		this.id = totalStores+1;
+		this.id = totalStores + 1;
 		customers = new HashSet<>();
 	}
 
@@ -29,6 +30,13 @@ public class Store {
 	}
 
 	public void addACustomer(Customer newCustomer) {
+		for (Customer customer : customers) {
+			if (customer.getLastName().equals(newCustomer.getLastName())) {
+				return;
+			} else if (customer.getFirstName().equals(newCustomer.getFirstName())) {
+				return;
+			}
+		}
 		customers.add(newCustomer);
 	}
 
